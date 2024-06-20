@@ -1,0 +1,35 @@
+{
+  "name": "personal-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/index.ts",
+    "compile": "tsc --watch",
+    "migrate": "db-migrate --migrations-dir ./migrations",
+    "migrate:create": "db-migrate create --config database.json -e dev",
+    "migrate:up": "db-migrate up --config database.json -e dev",
+    "migrate:down": "db-migrate down -c 2000 --config database.json -e dev",
+    "migrate-test:up": "db-migrate up --config database.json -e test",
+    "migrate-test:down": "db-migrate down -c 200 -e test"
+  },
+  "author": "Millicent",
+  "license": "ISC",
+  "dependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.21",
+    "@types/pg": "^8.11.5",
+    "config": "^3.3.11",
+    "db-migrate": "^0.11.14",
+    "db-migrate-pg": "^1.5.2",
+    "dotenv": "^16.4.5",
+    "env": "^0.0.2",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0",
+    "pg": "^8.11.5"
+  },
+  "devDependencies": {
+    "node-pg-migrate": "^7.0.0"
+  }
+}

@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS subtasks (
+    id SERIAL PRIMARY KEY,
+    taskId INTEGER REFERENCES tasks(id) ON DELETE CASCADE,
+    description TEXT NOT NULL,
+    completed BOOLEAN DEFAULT FALSE,
+    createdAt TIMESTAMPTZ DEFAULT NOW(),
+    updatedAt TIMESTAMPTZ DEFAULT NOW()
+);

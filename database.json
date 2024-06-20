@@ -1,0 +1,15 @@
+{
+    "dev":{
+        "ENV": "DATABASE_URL"
+    },
+    "staging": {
+        "ENV": "DATABASE_URL"
+    },
+    "production":{
+        "ENV": "DATABASE_URL"
+    },
+    "defaultEnv":{
+        "ENV": "NODE_ENV"
+    },
+    "sql-file": true
+}
