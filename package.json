@@ -5,8 +5,8 @@
   "main": "./src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./src/index.ts && npm run migrate:up" ,
-    "start": "ts-node ./src/index.ts",
+    "dev": "npm run migrate:up && nodemon ./src/index.ts npm run migrate:up" ,
+    "start": " npm run migrate:up && ts-node ./src/index.ts",
     "compile": "tsc --watch",
     "migrate": "db-migrate --migrations-dir ./migrations",
     "migrate:create": "db-migrate create --config database.json -e dev",
